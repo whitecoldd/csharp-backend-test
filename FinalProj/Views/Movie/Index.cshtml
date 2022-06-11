@@ -1,0 +1,46 @@
+﻿@model IEnumerable<FinalProj.Models.MovieModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Your Movie List</h1>
+
+<p>
+    <a type="button" class="btn btn-site mylink" asp-action="AddOrUpdate">Add New Movie</a>
+</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MovieName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MovieGenre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MovieDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieGenre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieDate)
+            </td>
+            <td>
+                @Html.ActionLink("Update", "AddOrUpdate", new { id=item.MovieID }) |
+                @Html.ActionLink("Delete", "Delete", new {  id=item.MovieID })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

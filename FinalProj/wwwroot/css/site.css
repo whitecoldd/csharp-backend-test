@@ -1,0 +1,35 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #F3EEC3;
+}
+
+.bg-mine {
+    background-color: #F7E3AF;
+}
+
+.bg-foot {
+    background-color: #F7E3AF;
+}
+
+.btn-site {
+    background-color: #B0D0D3;
+}
+
+.mylink{
+    text-decoration: none;
+}
